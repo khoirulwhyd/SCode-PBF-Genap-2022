@@ -1,31 +1,13 @@
 {
   "mahasiswa": [
     {
-      "id": 2,
-      "NIM": 140823453,
-      "nama": "Mahasiswa X",
-      "alamat": "Jl. Menur No. 9 Surabaya",
-      "hp": "081802023523",
-      "angkatan": 2014,
-      "status": "lulus"
-    },
-    {
-      "NIM": "1941720160",
-      "nama": "Andre",
-      "alamat": "Ponorogo",
-      "hp": "085722332122",
-      "angkatan": "2020",
-      "status": "Aktif",
-      "id": 1647389408360
-    },
-    {
-      "NIM": "1941720111",
-      "nama": "Lukman Hakim Al-Baqrobah",
-      "alamat": "Ponorogo",
-      "hp": "085722332121",
-      "angkatan": "2021",
-      "status": "Aktif",
-      "id": 1647389450401
+      "NIM": "1212121",
+      "nama": "dfdsfdsf",
+      "alamat": "malang",
+      "hp": "88348939",
+      "angkatan": "19",
+      "status": "mati",
+      "id": 1648610265106
     }
   ],
   "comments": [

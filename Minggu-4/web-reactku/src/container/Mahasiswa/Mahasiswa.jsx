@@ -36,6 +36,15 @@ class Mahasiswa extends Component{
             })
     }
 
+    handleHapusAll = () => {
+        this.state.listMahasiswa.map(mahasiswa => {
+            fetch(`http://localhost:3001/mahasiswa/${mahasiswa.id}`, {method: 'DELETE'})
+            .then( res => {
+                this.ambilDataDariServerAPI()
+            })
+        })
+    }
+
     handleTambahMahasiswa = (event) => {
         let formInsertMahasiswa = {...this.state.insertMahasiswa};
         let timestamp = new Date().getTime();
@@ -107,6 +116,8 @@ class Mahasiswa extends Component{
                         </div>
                     </div>
                     <button type="submit" className="btn btn-primary" onClick={this.handleTombolSimpan}>Simpan</button>
+                    <button type="danger" className="btn btn-primary" onClick={this.handleHapusAll}>Hapus Semua Data</button>
+                    
                 </div>
                     <h2>Daftar Mahasiswa</h2>
                     {
