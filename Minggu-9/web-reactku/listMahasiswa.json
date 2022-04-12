@@ -1,0 +1,23 @@
+{
+  "mahasiswa": [
+    {
+      "NIM": "1941720160",
+      "nama": "Kamdi",
+      "alamat": "Malang",
+      "hp": "081216055665",
+      "angkatan": "19",
+      "status": "Hidup",
+      "id": 1649774475585
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
