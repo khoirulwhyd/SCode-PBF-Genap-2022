@@ -116,7 +116,8 @@ class Mahasiswa extends Component{
                         </div>
                     </div>
                     <button type="submit" className="btn btn-primary" onClick={this.handleTombolSimpan}>Simpan</button>
-                    <button type="danger" className="btn btn-primary" onClick={this.handleHapusAll}>Hapus Semua Data</button>
+
+                    <button type="danger" className="btn btn-danger" onClick={this.handleHapusAll}>Hapus Semua Data</button>
                     
                 </div>
                     <h2>Daftar Mahasiswa</h2>

@@ -8,6 +8,15 @@
       "angkatan": "19",
       "status": "Hidup",
       "id": 1649774475585
+    },
+    {
+      "NIM": "121212",
+      "nama": "Khalid",
+      "alamat": "malang",
+      "hp": "00880808",
+      "angkatan": "99",
+      "status": "mati",
+      "id": 1649774854012
     }
   ],
   "comments": [
