@@ -1,6 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, {useState, useContext} from "react";
 import { AuthContext } from "./index";
 import firebase from "firebase/app";
+import auth from "firebase/auth";
+import { googleProvider } from "./firebase.config";
 
 const Join = () => {
     const [email, setEmail] = useState("");
@@ -9,17 +11,29 @@ const Join = () => {
 
     const Auth = useContext(AuthContext);
     const handleForm = e => {
-    e.preventDefault();
-    firebase
+        e.preventDefault();
+        firebase
+            .auth()
+            .createUserWithEmailAndPassword(email, password)
+            .then(res => {
+                if (res.user) Auth.setLoggedIn(true);
+            })
+            .catch(e => {
+                setErrors(e.message);
+            });
+    };
+
+    const handleLoginWithGoogle = e => {
+        firebase
         .auth()
-        .createUserWithEmailAndPassword(email, password)
-        .then(res => {
+        .signInWithPopup(googleProvider)
+        .then(res =>{
             if (res.user) Auth.setLoggedIn(true);
         })
         .catch(e => {
             setErrors(e.message);
-        });
-    };
+        })
+    }
 
     return (
         <div>
@@ -40,12 +54,12 @@ const Join = () => {
                     placeholder="password"
                 />
                 <hr />
-                <button class="googleBtn" type="button">
+                <button onClick={e => handleLoginWithGoogle(e)} class="googleBtn" type="button">
                     <img
                         src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
                         alt="logo"
                     />
-                    Login With Google
+                    Login with Google
                 </button>
                 <button type="submit">Login</button>
                 <span>{error}</span>

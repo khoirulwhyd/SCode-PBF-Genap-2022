@@ -1,3 +1,5 @@
+import firebase from "firebase";
+
 export default {
     apiKey: "AIzaSyAogKNWWWaZ6mw0Rw7UHWAjQDU33bOo-4E",
     authDomain: "authproject-bf30e.firebaseapp.com",
@@ -7,3 +9,4 @@ export default {
     appId: "1:234831144170:web:ff08d2d2b7ef2d6dca2393",
     measurementId: "G-7KT1VKTXZQ"
 };
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
